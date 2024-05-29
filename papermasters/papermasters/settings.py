@@ -118,7 +118,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ###------ TinyMCE  -------------
 
 DJANGO_SETTINGS_MODULE='papermasters.settings'
-TINYMCE_JS_URL = os.path.join(STATIC_URL, "path/to/tiny_mce/tiny_mce.js")
+TINYMCE_JS_URL = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js'
+
 TINYMCE_DEFAULT_CONFIG = {
     "height": "320px",
     "width": "960px",
@@ -134,4 +135,4 @@ TINYMCE_DEFAULT_CONFIG = {
     "language": "es_ES",  # To force a specific language instead of the Django current language.
 }
 TINYMCE_SPELLCHECKER = True
-TINYMCE_COMPRESSOR = True
+TINYMCE_COMPRESSOR = False

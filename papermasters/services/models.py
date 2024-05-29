@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django.urls import reverse
-from tinymce.models import HTMLField
+
 
 
 
@@ -16,7 +16,7 @@ class Service(models.Model):
     slug = models.SlugField(max_length=200, null = True, unique = True, blank = True)
     meta_title = models.CharField(max_length=200, blank=True) 
     meta_description = models.CharField(max_length=400)
-    content = HTMLField(blank=True, null=True)
+    content = models.TextField(max_length=3000, blank=True, null=True)
     notes = models.TextField(null = True, blank=True)
     img_src = models.CharField(max_length=255, blank=True, null=True)
     img_alt = models.CharField(max_length=255, blank=True,null=True)
